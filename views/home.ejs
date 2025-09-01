@@ -1,0 +1,90 @@
+<!-- <%- include('./base/header.ejs') %>
+
+    <div class="container">
+        <div class="alert text-center bg-primary my-3" style="color: white;">
+            <h4>Login Form</h4>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <form action="/add/user" method="post">
+                    <div>
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter your email" name="email">
+                    </div>
+                    <div>
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter your password" name="password">
+                    </div>
+                    <input type="submit" value="Login" class="btn btn-warning w-100 my-3">
+                    <div>
+                        <a href="/user/signup" class="btn btn-danger w-100 my-3">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+<%- include('./base/footer.ejs') %> -->
+
+<%- include('./base/header.ejs')%>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow-lg p-4" style="width: 400px; border-radius: 15px">
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <h3 class="fw-bold text-primary">Login</h3>
+      <p class="text-muted" style="background-color: rgb(242, 245, 244)">
+        Welcome back! Please login to continue
+      </p>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/login" method="post">
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit" class="btn btn-primary w-100 fw-semibold shadow-sm">
+        Login
+      </button>
+
+      <!-- Sign Up Button -->
+      <div class="text-center mt-3">
+        <p class="mb-2">Don’t have an account?</p>
+        <a
+          href="/user/signup"
+          class="btn btn-outline-success w-100 fw-semibold"
+        >
+          Sign Up
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('./base/footer.ejs')%>
